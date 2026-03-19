@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awadh Palace Hotel | Best Stay in Sitapur</title>
+    <meta name="description" content="Affordable luxury hotel in Sitapur with free WiFi, breakfast, and premium rooms.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Awadh Palace Hotel, Hotel in Sitapur, Sitapur Hotels, Affordable stay, Luxury rooms">
+    <meta name="author" content="Awadh Palace Hotel">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a88132', // Elegant gold/beige color for premium feel
+                        primaryHover: '#8a6a28',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent text-white border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-wider hover:text-primary transition-colors duration-300 drop-shadow-md text-white">
+                        AWADH PALACE
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-white hover:text-primary font-medium transition-colors duration-300 drop-shadow-md">About</a>
+                    <a href="#gallery" class="text-white hover:text-primary font-medium transition-colors duration-300 drop-shadow-md">Gallery</a>
+                    <a href="#amenities" class="text-white hover:text-primary font-medium transition-colors duration-300 drop-shadow-md">Amenities</a>
+                    <a href="#location" class="text-white hover:text-primary font-medium transition-colors duration-300 drop-shadow-md">Location</a>
+                    <a href="#contact" class="bg-primary hover:bg-primaryHover text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 shadow-lg hover:shadow-xl">Book Now</a>
+                    <button class="theme-toggle-btn p-2 rounded-full focus:outline-none drop-shadow-md transition-transform hover:scale-110">
+                        <!-- Icon injected by JS -->
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="theme-toggle-btn p-2 mr-4 rounded-full focus:outline-none drop-shadow-md transition-transform hover:scale-110">
+                        <!-- Icon injected by JS -->
+                    </button>
+                    <button id="mobile-menu-btn" class="focus:outline-none drop-shadow-md text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkCard absolute w-full shadow-lg border-t border-gray-100 dark:border-gray-800">
+            <div class="px-4 pt-2 pb-4 space-y-1 sm:px-3 text-gray-800 dark:text-gray-200">
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">About</a>
+                <a href="#gallery" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Gallery</a>
+                <a href="#amenities" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Amenities</a>
+                <a href="#location" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Location</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-bold text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-black">
+        <!-- Slider Images -->
+        <div class="absolute inset-0 z-0">
+            <img src="1.webp.png.jpg" alt="Hotel Hero 1" class="slide active w-full h-full object-cover object-center">
+            <img src="2.webp.png.jpg" alt="Hotel Hero 2" class="slide w-full h-full object-cover object-center">
+            <img src="3.webp.png.jpg" alt="Hotel Hero 3" class="slide w-full h-full object-cover object-center">
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+                AWADH PALACE HOTEL
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light tracking-wide drop-shadow-md">
+                Comfortable Stays. Premium Experience.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3 bg-primary hover:bg-primaryHover text-white rounded-full font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(168,129,50,0.5)] hover:shadow-[0_0_25px_rgba(168,129,50,0.8)] transform hover:-translate-y-1 text-center">
+                    Book Now
+                </a>
+                <a href="#location" class="w-full sm:w-auto px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/50 text-white rounded-full font-semibold transition-all duration-300 shadow-lg transform hover:-translate-y-1 text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white dark:bg-darkBg relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Welcome</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">About Our Hotel</h3>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-delay="100">
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 font-light">
+                        Located in Sitapur, AWADH PALACE HOTEL offers comfortable and affordable stays with modern amenities and excellent service. Experience a perfect blend of elegance, comfort, and premium hospitality designed to make your visit unforgettable.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
+                        Whether you are here for business or leisure, our prime location and exceptional facilities guarantee a relaxing and enjoyable stay. Enjoy a peaceful environment equipped with all the essentials you need.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left" data-aos-delay="200">
+                    <!-- Cards -->
+                    <div class="bg-gray-50 dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">⭐ 4.7</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">(429 Reviews) Guests love the service!</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <i class="fa-solid fa-calendar-check text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Flexible</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Free Cancellation Available on most rooms</p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <i class="fa-solid fa-kitchen-set text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Kitchenette</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Select rooms equipped with Kitchenettes</p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-darkCard p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 group">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                            <i class="fa-solid fa-car-side text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Proximity</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">8 min drive to Maharaja Ksheeta Pasi Smarak Park</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Masonry Grid) -->
+    <section id="gallery" class="py-24 bg-gray-100 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Explore</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Our Gallery</h3>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+            
+            <div class="masonry" data-aos="fade-up" data-aos-delay="200">
+                <!-- Gallery Images dynamically generated from 4 to 17 -->
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="4.webp.png.jpg" alt="Gallery Image" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="5.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="7.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="8.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="9.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="10.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="11.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="12.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="13.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="14.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="15.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="16.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+                <div class="masonry-item rounded-xl overflow-hidden shadow-md cursor-pointer group relative">
+                    <img src="17.webp.png.jpg" alt="Gallery" class="gallery-img w-full h-auto transform group-hover:scale-105 transition-transform duration-500 object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-magnifying-glass text-white opacity-0 group-hover:opacity-100 text-3xl transform scale-50 group-hover:scale-100 transition-all duration-300"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms & Amenities -->
+    <section id="amenities" class="py-24 bg-white dark:bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Facilities</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Rooms & Amenities</h3>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Room Features -->
+                <div data-aos="fade-right">
+                    <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-bed text-primary"></i>
+                        </div>
+                        Room Features
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-darkCard p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-transform hover:-translate-y-1">
+                            <i class="fa-solid fa-snowflake text-primary text-xl w-8"></i>
+                            <span class="text-lg font-medium">Air Conditioning</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-darkCard p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-transform hover:-translate-y-1">
+                            <i class="fa-solid fa-kitchen-set text-primary text-xl w-8"></i>
+                            <span class="text-lg font-medium">Kitchen Available</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-darkCard p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 transition-transform hover:-translate-y-1">
+                            <i class="fa-solid fa-bell-concierge text-primary text-xl w-8"></i>
+                            <span class="text-lg font-medium">Room Service</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 bg-amber-50 dark:bg-amber-900/20 rounded-xl p-6 border-l-4 border-amber-500 shadow-sm">
+                        <h5 class="text-lg font-bold text-amber-800 dark:text-amber-400 mb-4 flex items-center">
+                            <i class="fa-solid fa-circle-info mr-2"></i> Important Notes
+                        </h5>
+                        <ul class="space-y-3 text-amber-700 dark:text-amber-300/80">
+                            <li class="flex items-center bg-white/50 dark:bg-black/20 p-2 rounded-lg"><i class="fa-solid fa-ban text-sm mr-3 text-amber-600"></i> No Pets Allowed</li>
+                            <li class="flex items-center bg-white/50 dark:bg-black/20 p-2 rounded-lg"><i class="fa-solid fa-ban text-sm mr-3 text-amber-600"></i> No Pool / Spa / Gym</li>
+                            <li class="flex items-center bg-white/50 dark:bg-black/20 p-2 rounded-lg"><i class="fa-solid fa-ban text-sm mr-3 text-amber-600"></i> Not wheelchair accessible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hotel Amenities -->
+                <div data-aos="fade-left">
+                    <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-building text-primary"></i>
+                        </div>
+                        Property Amenities
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-wifi text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Free Wi-Fi</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-square-parking text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Free Parking</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-mug-hot text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Free Breakfast</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-clock text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">24hr Front Desk</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-jug-detergent text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Full-Service Laundry</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-darkCard rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 group">
+                            <i class="fa-solid fa-van-shuttle text-3xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Local Shuttle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Contact Info Section -->
+    <section id="location" class="py-24 bg-gray-100 dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">Reach Us</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Location & Check-in</h3>
+                <div class="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Check in Info -->
+                <div class="lg:col-span-1 space-y-6" data-aos="fade-right">
+                    <div class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-md border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                <i class="fa-regular fa-clock text-primary"></i>
+                            </div>
+                            Check-in Details
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-gray-50 dark:bg-slate-800 rounded-lg">
+                                <span class="text-gray-600 dark:text-gray-400 font-medium">Check-in</span>
+                                <span class="text-lg font-bold text-gray-900 dark:text-white bg-primary/10 px-3 py-1 rounded text-primary border border-primary/20">2:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-gray-50 dark:bg-slate-800 rounded-lg">
+                                <span class="text-gray-600 dark:text-gray-400 font-medium">Check-out</span>
+                                <span class="text-lg font-bold text-gray-900 dark:text-white bg-red-50 dark:bg-red-900/20 px-3 py-1 rounded text-red-500 border border-red-500/20">11:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-md border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                <i class="fa-solid fa-location-dot text-primary"></i>
+                            </div>
+                            Address
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 bg-gray-50 dark:bg-slate-800 p-4 rounded-lg">
+                            Sarai Maluhi, Naipalapur, Chauraha,<br>
+                            Sitapur, Uttar Pradesh 261001
+                        </p>
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                                <i class="fa-solid fa-phone text-primary"></i>
+                            </div>
+                            Phone
+                        </h4>
+                        <a href="tel:09838005711" class="inline-block text-xl font-semibold text-primary hover:text-primaryHover transition-colors bg-primary/5 p-3 rounded-lg border border-primary/10 w-full text-center">
+                            098380 05711
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:col-span-2 bg-white dark:bg-darkCard p-2 rounded-2xl shadow-md border border-gray-100 dark:border-gray-800 h-[500px] lg:h-auto relative" data-aos="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.7590062640884!2d80.70525177446694!3d27.569988831538176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ed765c584394f%3A0x538003c66d59ddea!2sAwadh%20Palace!5e0!3m2!1sen!2sin!4v1773951772155!5m2!1sen!2sin" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Form -->
+    <section id="contact" class="py-24 bg-white dark:bg-darkBg relative overflow-hidden">
+        <!-- Decorative Background Pattern -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white dark:bg-darkCard rounded-3xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800" data-aos="zoom-in" data-aos-duration="800">
+                <div class="p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Book Your Stay</h2>
+                        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Fill out the form below with your details and preferred dates, and we will get back to you to confirm your booking.</p>
+                    </div>
+
+                    <div id="form-status"></div>
+
+                    <form id="booking-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fa-regular fa-user text-gray-400"></i>
+                                    </div>
+                                    <input type="text" id="name" name="name" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fa-solid fa-phone text-gray-400"></i>
+                                    </div>
+                                    <input type="tel" id="phone" name="phone" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none" placeholder="Enter your number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-regular fa-envelope text-gray-400"></i>
+                                </div>
+                                <input type="email" id="email" name="email" required class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none" placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="checkin" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Check-in Date</label>
+                                <input type="date" id="checkin" name="checkin" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none cursor-pointer">
+                            </div>
+                            <div>
+                                <label for="checkout" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Check-out Date</label>
+                                <input type="date" id="checkout" name="checkout" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none cursor-pointer">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Special Requests / Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm outline-none resize-y" placeholder="Let us know if you need anything specific..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryHover text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(168,129,50,0.39)] hover:shadow-[0_6px_20px_rgba(168,129,50,0.23)] hover:-translate-y-1 transform text-lg flex items-center justify-center">
+                            <span>Send Booking Request</span>
+                            <i class="fa-solid fa-paper-plane ml-3"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold tracking-wider mb-6 text-primary flex items-center">
+                        AWADH PALACE
+                    </h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8 max-w-md">
+                        Experience comfortable and affordable luxury in Sitapur. We offer premium rooms, excellent service, and a memorable stay for all guests with modern amenities.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary transition-all hover:scale-110 shadow-lg">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b-2 border-primary/50 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors flex items-center group"><i class="fa-solid fa-angle-right text-xs mr-3 text-gray-600 group-hover:text-primary transition-colors"></i> Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors flex items-center group"><i class="fa-solid fa-angle-right text-xs mr-3 text-gray-600 group-hover:text-primary transition-colors"></i> About Us</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-primary transition-colors flex items-center group"><i class="fa-solid fa-angle-right text-xs mr-3 text-gray-600 group-hover:text-primary transition-colors"></i> Gallery</a></li>
+                        <li><a href="#amenities" class="text-gray-400 hover:text-primary transition-colors flex items-center group"><i class="fa-solid fa-angle-right text-xs mr-3 text-gray-600 group-hover:text-primary transition-colors"></i> Amenities</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors flex items-center group"><i class="fa-solid fa-angle-right text-xs mr-3 text-gray-600 group-hover:text-primary transition-colors"></i> Bookings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b-2 border-primary/50 pb-2 inline-block">Contact Info</h4>
+                    <ul class="space-y-5">
+                        <li class="flex items-start text-gray-400">
+                            <i class="fa-solid fa-location-dot mt-1 w-6 text-primary flex-shrink-0"></i>
+                            <span class="leading-snug">Sarai Maluhi, Naipalapur, Chauraha, Sitapur, Uttar Pradesh 261001</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fa-solid fa-phone w-6 text-primary flex-shrink-0"></i>
+                            <a href="tel:09838005711" class="hover:text-primary transition-colors">098380 05711</a>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fa-solid fa-envelope w-6 text-primary flex-shrink-0"></i>
+                            <a href="mailto:contact@awadhpalacehotel.com" class="hover:text-primary transition-colors">contact@awadhpalacehotel.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 Awadh Palace Hotel. All Rights Reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-primaryHover text-white rounded-full items-center justify-center shadow-lg transition-all duration-300 hover:-translate-y-2 z-50 focus:outline-none focus:ring-4 focus:ring-primary/30">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 text-sm tracking-widest uppercase">Click anywhere to close</div>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll (AOS)
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
